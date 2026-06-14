@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sheets-manager
+    env: node
+    region: oregon
+    branch: main
+    buildCommand: cd client && npm install && npm run build && cd ../server && npm install
+    startCommand: cd server && npm start
+    autoDeploy: true
